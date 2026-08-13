@@ -67,7 +67,7 @@
         .container { width:92%; max-width:1150px; margin:0 auto; padding:0 10px; }
         .text-center { text-align:center; }
 
-        /* ==================== SIDE NAV (جديد) ==================== */
+        /* ==================== SIDE NAV ==================== */
         .side-nav {
             position:fixed; top:50%; right:15px; transform:translateY(-50%);
             z-index:999; display:flex; flex-direction:column; gap:8px;
@@ -104,7 +104,12 @@
         .logo-box .logo-fallback { font-size:1.2rem; color:var(--gold-light); }
         .brand-block { display:flex; flex-direction:column; }
         .brand-name { font-family:var(--font-heading); font-weight:800; font-size:1.3rem; color:var(--green-dark); line-height:1.2; }
-        .brand-name span { background:var(--gradient-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .brand-name span {
+            background:var(--gradient-gold);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+        }
         .brand-sub { font-size:0.58rem; color:var(--text-muted); font-weight:500; }
         .nav-links { display:flex; gap:1.8rem; align-items:center; list-style:none; }
         .nav-links a { color:var(--text-medium); font-weight:500; font-size:0.85rem; text-decoration:none; position:relative; padding:5px 2px; transition:var(--transition-fast); }
@@ -119,7 +124,7 @@
         .hamburger.active span:nth-child(2){opacity:0}
         .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 
-        /* ==================== HERO (تصميم جانبي) ==================== */
+        /* ==================== HERO ==================== */
         .hero {
             min-height:100vh; display:flex; align-items:center;
             position:relative; z-index:1; padding:120px 0 60px;
@@ -141,18 +146,15 @@
             align-items:center; position:relative; z-index:2;
         }
         .hero-content { text-align:right; }
-        .hero-badge {
-            display:inline-flex; align-items:center; gap:6px;
-            background:rgba(192,154,62,0.15); border:1px solid var(--gold-main);
-            color:var(--gold-light); padding:8px 20px; border-radius:var(--radius-full);
-            font-size:0.78rem; font-weight:700; margin-bottom:20px;
-        }
         .hero-content h1 {
             font-size:clamp(2.2rem,5vw,4rem); font-weight:900; line-height:1.2;
             margin-bottom:1rem; color:var(--white); font-family:var(--font-heading);
         }
         .hero-content h1 .gold-text {
-            background:var(--gradient-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+            background:var(--gradient-gold);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
         }
         .hero-desc { font-size:1rem; color:rgba(255,255,255,0.85); max-width:450px; margin-bottom:2.2rem; line-height:2; }
         .hero-btns { display:flex; gap:0.8rem; flex-wrap:wrap; }
@@ -184,7 +186,12 @@
             font-size:0.78rem; font-weight:700; margin-bottom:15px;
         }
         .section-title { font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:900; color:var(--green-dark); margin-bottom:0.5rem; font-family:var(--font-heading); }
-        .section-title .gold-text { background:var(--gradient-gold); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .section-title .gold-text {
+            background:var(--gradient-gold);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+        }
         .section-desc { color:var(--text-muted); max-width:520px; margin:0 auto 2.5rem; font-size:0.9rem; line-height:1.9; }
 
         /* ==================== ABOUT ==================== */
@@ -201,6 +208,39 @@
             box-shadow:var(--shadow-green); overflow:hidden;
         }
         .about-image-box img { width:100%; height:100%; object-fit:cover; }
+        .about-full-text {
+            max-width:950px; margin:2.5rem auto 0; text-align:right;
+            background:var(--cream); padding:2rem 2.5rem;
+            border-radius:var(--radius-md); border-right:4px solid var(--gold-main);
+            box-shadow:var(--shadow-sm);
+        }
+        .about-full-text h4 {
+            font-family:var(--font-heading); color:var(--green-dark);
+            margin-bottom:1rem; font-size:1.2rem;
+        }
+        .about-full-text p { color:var(--text-body); font-size:0.95rem; line-height:2.1; margin-bottom:1rem; }
+        .about-full-text p:last-child { margin-bottom:0; }
+        .about-full-text strong { color:var(--green-dark); }
+        .vision-mission {
+            display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;
+            margin-top:1.5rem;
+        }
+        .vision-box, .mission-box {
+            background:var(--white); padding:1.5rem 1.8rem;
+            border-radius:var(--radius-md); box-shadow:var(--shadow-sm);
+            border:1px solid rgba(10,75,41,0.08);
+            transition:var(--transition-smooth);
+        }
+        .vision-box:hover, .mission-box:hover {
+            border-color:var(--gold-main); box-shadow:var(--shadow-gold); transform:translateY(-3px);
+        }
+        .vision-box h5, .mission-box h5 {
+            font-family:var(--font-heading); font-size:1.05rem;
+            color:var(--green-dark); margin-bottom:0.5rem;
+            display:flex; align-items:center; gap:8px;
+        }
+        .vision-box h5 i, .mission-box h5 i { color:var(--gold-main); }
+        .vision-box p, .mission-box p { font-size:0.88rem; color:var(--text-medium); line-height:1.9; margin-bottom:0; }
 
         /* ==================== GALLERY (Mosaic) ==================== */
         .gallery-mosaic {
@@ -215,7 +255,7 @@
         .gallery-item:nth-child(1) { grid-column:span 2; grid-row:span 2; }
         .gallery-item:nth-child(4) { grid-column:span 2; }
         .gallery-item:hover { transform:scale(0.98); box-shadow:var(--shadow-gold); }
-        .gallery-img { width:100%; height:100%; min-height:120px; display:flex; align-items:center; justify-content:center; overflow:hidden; background:var(--green-pale); }
+        .gallery-img { width:100%; height:100%; min-height:120px; display:flex; align-items:center; justify-content:center; overflow:hidden; background:var(--cream); }
         .gallery-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.8s ease; }
         .gallery-item:hover .gallery-img img { transform:scale(1.1); }
         .gallery-img .ph { font-size:2rem; color:var(--green-light); }
@@ -253,7 +293,12 @@
             text-align:center; position:relative; z-index:1;
         }
         .footer-brand { font-family:var(--font-heading); font-weight:700; font-size:1.15rem; color:var(--white); margin-bottom:0.5rem; }
-        .footer-brand span { color:var(--gold-light); }
+        .footer-brand span {
+            background:var(--gradient-gold);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+        }
         .footer-links { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin:1.2rem 0; }
         .footer-links a { color:rgba(255,255,255,0.7); text-decoration:none; transition:var(--transition-fast); font-size:0.82rem; }
         .footer-links a:hover { color:var(--gold-light); }
@@ -273,7 +318,7 @@
         .btt.show { opacity:1; visibility:visible; }
         .btt:hover { transform:scale(1.1); }
 
-        /* ============= RESPONSIVE (تحسينات شاملة للهواتف) ============= */
+        /* ============= RESPONSIVE ============= */
         @media(max-width:1024px) {
             .hero-logo-big { width:250px; height:250px; }
         }
@@ -290,6 +335,8 @@
             .hero-btns { justify-content:center; }
             .hero-visual { display:none; }
             .about-grid { grid-template-columns:1fr; }
+            .about-full-text { padding:1.5rem; }
+            .vision-mission { grid-template-columns:1fr; }
             .gallery-mosaic { grid-template-columns:repeat(2,1fr); gap:0.5rem; }
             .gallery-item:nth-child(1) { grid-column:span 1; grid-row:span 1; }
             .gallery-item:nth-child(4) { grid-column:span 1; }
@@ -329,7 +376,7 @@
         <div class="container header-inner">
             <a href="#home" class="logo-wrap">
                 <div class="logo-box" id="logoPlaceholder">
-                    <img src="lo.png" alt="الفيحاء" onerror="this.style.display='none';this.parentElement.querySelector('.logo-fallback').style.display='block';">
+                    <img src="lo.jpeg" alt="الفيحاء" onerror="this.style.display='none';this.parentElement.querySelector('.logo-fallback').style.display='block';">
                     <span class="logo-fallback" style="display:none;"><i class="fas fa-seedling"></i></span>
                 </div>
                 <div class="brand-block">
@@ -354,7 +401,6 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content" data-aos="fade-left">
-                        <span class="hero-badge"><i class="fas fa-tractor"></i> زراعة وثروة حيوانية</span>
                         <h1>شركة <span class="gold-text">الفيحاء</span></h1>
                         <p class="hero-desc">لاستيراد المستلزمات الزراعية والحيوانية والبيض المخصب. نلتزم بتوفير أجود المنتجات لدعم القطاع الزراعي والحيواني في ليبيا.</p>
                         <div class="hero-btns">
@@ -373,7 +419,10 @@
 
         <!-- ==================== ABOUT ==================== -->
         <section class="section section-white" id="about"><div class="container">
-            <div class="text-center" data-aos="fade-up"><span class="section-badge"><i class="fas fa-info-circle"></i> من نحن</span><h2 class="section-title">عن <span class="gold-text">الفيحاء</span></h2></div>
+            <div class="text-center" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-info-circle"></i> من نحن</span>
+                <h2 class="section-title">عن <span class="gold-text">شركة الفيحاء</span></h2>
+            </div>
             <div class="about-grid">
                 <div class="about-text-box" data-aos="fade-left">
                     <h3>شريكك الموثوق في القطاع الزراعي</h3>
@@ -383,24 +432,62 @@
                     <i class="fas fa-tractor"></i>
                 </div>
             </div>
+            
+            <!-- النص الكامل لمن نحن -->
+            <div class="about-full-text" data-aos="fade-up">
+                <h4><i class="fas fa-quote-right" style="color:var(--gold-main); margin-left:8px;"></i>من نحن</h4>
+                <p><strong>شركة الفيحاء لاستيراد المستلزمات الزراعية والحيوانية والبيض المخصب ذات مسؤولية محدودة</strong> هي شركة متخصصة في مجال الاستيراد والتوريد، وتسعى إلى توفير مجموعة متكاملة من المستلزمات الزراعية والحيوانية والبيض المخصب بجودة عالية وبما يلبي احتياجات المزارعين والمربين والقطاع الزراعي والحيواني.</p>
+                <p>نعمل على بناء شراكات موثوقة مع الموردين والمصنعين، وتوفير منتجات ذات جودة ومواصفات مناسبة، مع الحرص على الالتزام، المصداقية، جودة المنتجات وسرعة تلبية احتياجات العملاء.</p>
+                <p>نسعى من خلال خبرتنا وشراكاتنا التجارية إلى المساهمة في تطوير القطاع الزراعي والحيواني، وتقديم حلول ومنتجات موثوقة تدعم نمو واستدامة المشاريع الزراعية ومشاريع تربية الدواجن والثروة الحيوانية.</p>
+                
+                <div class="vision-mission">
+                    <div class="vision-box">
+                        <h5><i class="fas fa-eye"></i> رؤيتنا</h5>
+                        <p>أن نكون من الشركات الرائدة والموثوقة في مجال استيراد وتوريد المستلزمات الزراعية والحيوانية والبيض المخصب، وأن نكون شريكًا ناجحًا لعملائنا في ليبيا والأسواق المستهدفة.</p>
+                    </div>
+                    <div class="mission-box">
+                        <h5><i class="fas fa-bullseye"></i> رسالتنا</h5>
+                        <p>توفير منتجات موثوقة وخدمات احترافية، وبناء علاقات تجارية طويلة الأمد قائمة على الجودة والثقة والمصداقية.</p>
+                    </div>
+                </div>
+            </div>
         </div></section>
 
         <!-- ==================== GALLERY ==================== -->
         <section class="section" id="gallery"><div class="container">
-            <div class="text-center" data-aos="fade-up"><span class="section-badge"><i class="fas fa-images"></i> المعرض</span><h2 class="section-title">صور <span class="gold-text">الشركة</span></h2><p class="section-desc">لقطات من منتجاتنا وأنشطتنا.</p></div>
+            <div class="text-center" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-images"></i> المعرض</span>
+                <h2 class="section-title">صور <span class="gold-text">الشركة</span></h2>
+                <p class="section-desc">لقطات من منتجاتنا وأنشطتنا.</p>
+            </div>
             <div class="gallery-mosaic">
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50"><div class="gallery-img"><img src="j1.jpeg" alt="منتجات زراعية 1" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-seedling ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><div class="gallery-img"><img src="j2.jpeg" alt="جرار زراعي" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-tractor ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150"><div class="gallery-img"><img src="j3.jpeg" alt="بيض مخصب" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-egg ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><div class="gallery-img"><img src="j4.jpeg" alt="ماشية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-cow ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250"><div class="gallery-img"><img src="j5.jpeg" alt="مستودع" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-warehouse ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><div class="gallery-img"><img src="j6.jpeg" alt="أوراق نباتية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-leaf ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50">
+                    <div class="gallery-img"><img src="j1.jpeg" alt="مستلزمات زراعية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-seedling ph\'></i>'"></div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-img"><img src="j2.jpeg" alt="جرار زراعي" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-tractor ph\'></i>'"></div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="gallery-img"><img src="j3.jpeg" alt="بيض مخصب" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-egg ph\'></i>'"></div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-img"><img src="j4.jpeg" alt="ماشية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-cow ph\'></i>'"></div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="gallery-img"><img src="j5.jpeg" alt="مستودع" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-warehouse ph\'></i>'"></div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="gallery-img"><img src="j6.jpeg" alt="أوراق نباتية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-leaf ph\'></i>'"></div>
+                </div>
             </div>
         </div></section>
 
         <!-- ==================== CONTACT ==================== -->
         <section class="section section-white" id="contact"><div class="container">
-            <div class="text-center" data-aos="fade-up"><span class="section-badge"><i class="fas fa-headset"></i> اتصل بنا</span><h2 class="section-title">نحن في <span class="gold-text">خدمتكم</span></h2></div>
+            <div class="text-center" data-aos="fade-up">
+                <span class="section-badge"><i class="fas fa-headset"></i> اتصل بنا</span>
+                <h2 class="section-title">نحن في <span class="gold-text">خدمتكم</span></h2>
+            </div>
             <div class="contact-grid">
                 <div class="contact-card" data-aos="flip-left" data-aos-delay="50"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><h4>هاتف ١</h4><p class="sub">اتصال مباشر</p><a href="tel:+218922200400" class="contact-link">0922200400</a></div>
                 <div class="contact-card" data-aos="flip-left" data-aos-delay="100"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><h4>هاتف ٢</h4><p class="sub">اتصال مباشر</p><a href="tel:+218912149402" class="contact-link">0912149402</a></div>
