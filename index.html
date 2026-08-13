@@ -273,27 +273,45 @@
         .btt.show { opacity:1; visibility:visible; }
         .btt:hover { transform:scale(1.1); }
 
+        /* ============= RESPONSIVE (تحسينات شاملة للهواتف) ============= */
+        @media(max-width:1024px) {
+            .hero-logo-big { width:250px; height:250px; }
+        }
+
         @media(max-width:768px){
             .side-nav { display:none; }
             .nav-links { display:none; position:absolute; top:58px; left:0; width:100%; background:var(--white); flex-direction:column; padding:1.5rem; border-radius:0 0 var(--radius-md) var(--radius-md); border:1px solid rgba(10,75,41,0.1); gap:1rem; box-shadow:var(--shadow-md); }
             .nav-links.open { display:flex; }
             .hamburger { display:block; }
-            .hero-grid { grid-template-columns:1fr; text-align:center; }
+            .hero { padding:110px 0 50px; min-height:auto; }
+            .hero-grid { grid-template-columns:1fr; text-align:center; gap:1rem; }
             .hero-content { text-align:center; }
             .hero-desc { margin-left:auto; margin-right:auto; }
             .hero-btns { justify-content:center; }
             .hero-visual { display:none; }
             .about-grid { grid-template-columns:1fr; }
-            .gallery-mosaic { grid-template-columns:repeat(2,1fr); }
+            .gallery-mosaic { grid-template-columns:repeat(2,1fr); gap:0.5rem; }
+            .gallery-item:nth-child(1) { grid-column:span 1; grid-row:span 1; }
+            .gallery-item:nth-child(4) { grid-column:span 1; }
             .section { padding:50px 0; }
-            .hero { padding:130px 0 50px; min-height:auto; }
+            .section-desc { margin-bottom:1.8rem; }
+            .contact-grid { grid-template-columns:repeat(2,1fr); gap:0.8rem; }
         }
+
         @media(max-width:480px){
-            .container { width:94%; padding:0 8px; }
+            .container { width:95%; padding:0 6px; }
             .contact-grid { grid-template-columns:1fr; max-width:320px; }
             .brand-name { font-size:1.05rem; }
-            .hero-content h1 { font-size:1.7rem; }
-            .section-title { font-size:1.4rem; }
+            .brand-sub { font-size:0.5rem; }
+            .logo-box { width:42px; height:42px; }
+            .hero-content h1 { font-size:1.8rem; }
+            .section-title { font-size:1.5rem; }
+            .hero-btns .btn { padding:12px 18px; font-size:0.8rem; }
+            .btn { gap:6px; }
+            .gallery-mosaic { grid-template-columns:1fr 1fr; }
+            .gallery-img { min-height:100px; }
+            .footer-contact { flex-direction:column; gap:0.5rem; }
+            .footer-links { gap:1rem; }
         }
     </style>
 </head>
@@ -319,7 +337,7 @@
                     <span class="brand-sub">لاستيراد المستلزمات الزراعية والحيوانية والبيض المخصب</span>
                 </div>
             </a>
-            <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+            <button class="hamburger" id="hamburgerBtn" aria-label="القائمة"><span></span><span></span><span></span></button>
             <nav><ul class="nav-links" id="navMenu">
                 <li><a href="#home" class="active">الرئيسية</a></li>
                 <li><a href="#about">من نحن</a></li>
@@ -371,12 +389,12 @@
         <section class="section" id="gallery"><div class="container">
             <div class="text-center" data-aos="fade-up"><span class="section-badge"><i class="fas fa-images"></i> المعرض</span><h2 class="section-title">صور <span class="gold-text">الشركة</span></h2><p class="section-desc">لقطات من منتجاتنا وأنشطتنا.</p></div>
             <div class="gallery-mosaic">
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50"><div class="gallery-img"><img src="j1.jpeg" alt="1" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-seedling ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><div class="gallery-img"><img src="j2.jpeg" alt="2" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-tractor ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150"><div class="gallery-img"><img src="j3.jpeg" alt="3" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-egg ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><div class="gallery-img"><img src="j4.jpeg" alt="4" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-cow ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250"><div class="gallery-img"><img src="j5.jpeg" alt="5" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-warehouse ph\'></i>'"></div></div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><div class="gallery-img"><img src="j6.jpeg" alt="6" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-leaf ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50"><div class="gallery-img"><img src="j1.jpeg" alt="منتجات زراعية 1" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-seedling ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100"><div class="gallery-img"><img src="j2.jpeg" alt="جرار زراعي" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-tractor ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150"><div class="gallery-img"><img src="j3.jpeg" alt="بيض مخصب" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-egg ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200"><div class="gallery-img"><img src="j4.jpeg" alt="ماشية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-cow ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250"><div class="gallery-img"><img src="j5.jpeg" alt="مستودع" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-warehouse ph\'></i>'"></div></div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300"><div class="gallery-img"><img src="j6.jpeg" alt="أوراق نباتية" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-leaf ph\'></i>'"></div></div>
             </div>
         </div></section>
 
@@ -408,7 +426,7 @@
         <div class="footer-bottom">© 2026 شركة الفيحاء - جميع الحقوق محفوظة.</div>
     </div></footer>
 
-    <button class="btt" id="btt"><i class="fas fa-chevron-up"></i></button>
+    <button class="btt" id="btt" aria-label="العودة للأعلى"><i class="fas fa-chevron-up"></i></button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
